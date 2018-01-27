@@ -1,0 +1,126 @@
+/*
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+body {
+	background-color: #fff;
+	font-size: 1.2rem;
+	font-family: sans-serif;
+}
+
+ol {
+	list-style: none;
+}
+ol.xoxo, ol.hoist {
+	margin-top: 55px;
+	margin-left: 18px;
+	padding: 4px;
+}
+div#toolbar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 35px;
+	width: 100%;
+	background-color: #ccc;
+	padding: 8px;
+	z-index: 10;
+}
+div#toolbar div.formish {text-align:center;}
+div#toolbar h1 {position: absolute; left: 4px; top:4px; font-size: 1em; font-weight: normal;}
+div#toolbar ul {position: absolute; top: 0px; right: 30px;}
+div#toolbar ul li {display: inline; list-style: none;}
+
+ol li {
+	margin: 0px 0px 4px 0px;
+	padding: 4px 0px 4px 4px;
+	position: relative;
+}
+
+ol li span.flip {
+	position: absolute;
+	top: 6px;
+	left: -12px;
+	height: 12px;
+	width: 12px;
+}
+
+
+ol li span.in {background: url(closed.gif) no-repeat;}
+ol li span.down {background: url(open.gif) no-repeat;}
+ol li span.dim {background: url(empty.gif) no-repeat;}
+
+ol li span.txt {
+	height: 1.2rem;
+	overflow: auto;
+}
+
+ol li ol {
+	margin-left: 0px;
+	padding-left: 28px;
+	padding-top: 4px;
+	margin-bottom: -4px;
+}
+
+ol li[compact] ol { display: none; }
+
+textarea {
+	border: none;
+	font-family: Arial,sans;
+	background-color: transparent;
+	font-size: 1em;
+	padding: 0px;
+	overflow-x: auto;
+	height: 2ex;
+}
+textarea:focus {
+    outline: none;
+}
+
+
+[draggable] {
+	user-select: none;
+}
+
+li.topDrag { border-top: 1px solid red; }
+li.bottomDrag { border-bottom: 1px solid red; }
+
+
+ol.hoist { display: none; }
+h2.hoisted {
+	position: absolute;
+	left: 8rem;
+	top: 0;
+	font-weight: normal;
+    font-size: inherit;
+    color: #933;
+
+	display: none;
+}
+
+#haalp {
+	display: none;
+	position: absolute;
+	top: 42px;
+	right: 5px;
+	font-size: small;
+	width: 270px;
+	background-color: rgba(255, 255, 255, 0.85);
+}
+#haalp dt {
+	font-weight: bold;
+}
+#haalp dt.cred {
+	margin-top: 12px;
+}
